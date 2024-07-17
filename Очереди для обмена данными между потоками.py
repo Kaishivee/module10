@@ -25,7 +25,7 @@ class Cafe:
 
     def customer_arrival(self):
         customer = 0
-        while customer <= 20:
+        while customer < 20:
             customer += 1
             sleep(1)
             print(f'Посетитель номер {customer} прибыл')
