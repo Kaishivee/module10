@@ -33,8 +33,10 @@ class Cafe:
         while customer <= 3:
             self.number += 1
             print(f'Посетитель номер {customer} сел за стол {self.number}')
-        if customer == 3:
+            sleep(5)
             print(f'Посетитель номер {customer} покушал и ушёл')
+        if customer == 3:
+            print(f'Посетитель номер {customer} ожидает свободный стол')
 
 
 # Customer - класс (поток) посетителя. Запускается, если есть свободные столы.
@@ -48,4 +50,3 @@ class Cafe:
 class Customer:
     def __init__(self):
         pass
-
