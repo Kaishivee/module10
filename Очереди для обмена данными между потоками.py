@@ -37,7 +37,7 @@ class Cafe:
             sleep(5)
             print(f'Посетитель номер {customer} покушал и ушёл')
             self.number -= 1
-        if customer == 3:
+        if self.number == 3:
             print(f'Посетитель номер {customer} ожидает свободный стол')
 
 
