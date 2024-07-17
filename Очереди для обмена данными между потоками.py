@@ -19,6 +19,7 @@ class Table:
 
 class Cafe:
     def __init__(self, tables):
+        self.number = None
         self.queue = []
         self.tables = tables
 
@@ -30,11 +31,12 @@ class Cafe:
 
     def serve_customer(self, customer):
         self.number = 1
-        while customer <= 3:
+        while self.number <= 3:
             self.number += 1
             print(f'Посетитель номер {customer} сел за стол {self.number}')
             sleep(5)
             print(f'Посетитель номер {customer} покушал и ушёл')
+            self.number -= 1
         if customer == 3:
             print(f'Посетитель номер {customer} ожидает свободный стол')
 
