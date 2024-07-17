@@ -7,8 +7,8 @@ from time import sleep
 
 class Table:
     def __init__(self):
-        self.number = int
-        self.is_busy = None
+        self.number = 1
+        self.is_busy = False
 
 # 1.Атрибуты queue - очередь посетителей (создаётся внутри init), tables список столов (поступает из вне).
 # 2.Метод customer_arrival(self) - моделирует приход посетителя(каждую секунду).
@@ -19,7 +19,6 @@ class Table:
 
 class Cafe:
     def __init__(self, tables):
-        self.number = None
         self.queue = []
         self.tables = tables
 
