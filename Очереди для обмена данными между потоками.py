@@ -52,3 +52,19 @@ class Cafe:
 class Customer:
     def __init__(self):
         pass
+
+
+table1 = Table()
+table2 = Table()
+table3 = Table()
+tables = [table1, table2, table3]
+
+# Инициализируем кафе
+cafe = Cafe(tables)
+
+# Запускаем поток для прибытия посетителей
+customer_arrival_thread = Thread(target=cafe.customer_arrival)
+customer_arrival_thread.start()
+
+# Ожидаем завершения работы прибытия посетителей
+customer_arrival_thread.join()
